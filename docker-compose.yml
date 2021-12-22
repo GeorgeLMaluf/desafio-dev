@@ -10,11 +10,13 @@ services:
       - ".env"
   api:
     build: ./api
+    expose:
+      - "3010"
     command: >
       bash -c "rm -f tmp/pids/server.pid &&
       bundle exec rails db:migrate && 
       bundle exec rails db:seed && 
-      bundle exec rails -s -p 3010 -b '0.0.0.0'"
+      bundle exec rails s -p 3010 -b '0.0.0.0'"
     ports:
       - "3010:3010"
     env_file:
