@@ -1,0 +1,33 @@
+# This is the configuration used to check the source code with rubocop gem
+require:
+  - rubocop/cop/internal_affairs
+  - rubocop/performance
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+    - 'bin/**/*'
+    - 'db/**/*'
+  TargetRubyVersion: 2.6
+
+Style/Documentation:
+  Enabled: false
+Layout/LineLength:
+  Max: 120
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+    - '**/*.gemspec'
+    - '**/routes.rb'
+RSpec/RepeatedExampleGroupDescription:
+  Enabled: false
+RSpec/RepeatedExampleGroupBody:
+  Enabled: false
+Migration/DepartmentName:
+  Enabled: false
