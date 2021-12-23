@@ -39,7 +39,7 @@ group :development, :test do
     gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main'
   end
 
-  gem 'rubocop', require: false
+  gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rspec'
 end
@@ -47,7 +47,7 @@ end
 group :test do
   gem 'database_cleaner'
   gem 'shoulda-matchers'
-  gem 'simplecov', require: false
+  gem 'simplecov'
 end
 
 group :development do
