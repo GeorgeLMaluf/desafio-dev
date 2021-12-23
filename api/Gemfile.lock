@@ -115,6 +115,12 @@ GEM
     concurrent-ruby (1.1.9)
     cpf_cnpj (0.5.0)
     crass (1.0.6)
+    database_cleaner (2.0.1)
+      database_cleaner-active_record (~> 2.0.0)
+    database_cleaner-active_record (2.0.1)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
     diff-lcs (1.4.4)
     erubi (1.10.0)
     factory_bot (6.2.0)
@@ -231,6 +237,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   cpf_cnpj
+  database_cleaner
   factory_bot_rails (~> 6.1)
   faker
   listen (~> 3.3)
