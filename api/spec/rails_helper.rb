@@ -1,5 +1,13 @@
 # frozen_string_literal: true
 
+# Add Simplecov configuration
+require 'simplecov'
+SimpleCov.start do
+  add_group 'Config', 'config'
+  add_group 'Models', 'app/models'
+  add_group 'Specs', 'spec'
+end
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
