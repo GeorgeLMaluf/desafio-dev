@@ -29,7 +29,12 @@ gem 'cpf_cnpj'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # Add Rspec gems using block statments
+  %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
+    gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main'
+  end
+
   gem 'rubocop', require: false
   gem 'rubocop-performance'
   gem 'rubocop-rspec'
