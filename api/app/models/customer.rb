@@ -8,6 +8,8 @@ class Customer < ApplicationRecord
     return errors.add(:base, "CPF #{self.cpf} invalid") unless CPF.valid?(self.cpf)
   end
 
+  private
+
   def record_exists?
     return false unless Customer.find_by_cpf(self.cpf).present?
 
