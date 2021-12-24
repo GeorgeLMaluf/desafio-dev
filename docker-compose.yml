@@ -21,6 +21,8 @@ services:
       - "3010:3010"
     env_file:
       - ".env"
+    volumes:
+      - ./api:/api
     depends_on:
       - postgres
     tty: true

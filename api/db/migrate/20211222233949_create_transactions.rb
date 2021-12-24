@@ -5,7 +5,7 @@ class CreateTransactions < ActiveRecord::Migration[6.1]
       t.string "nature"
       t.boolean "signal"
       t.float "value"
-      t.data "transaction_date"
+      t.date "transaction_date"
       t.string "hour"
       t.string "card_number"
       t.bigint "customer_id"

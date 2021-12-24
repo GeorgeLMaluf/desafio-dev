@@ -9,7 +9,7 @@ class Provider < ApplicationRecord
 
   private
 
-  def record_exists?
+  def name_provider_exists?
     return false unless Provider.where('lower(name_provider) LIKE ?', "%#{self.name_provider.downcase}%").present?
 
     true
