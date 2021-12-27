@@ -27,3 +27,16 @@ services:
       - postgres
     tty: true
     stdin_open: true
+
+  web:
+    build: ./web
+    command: npm run start
+    tty: true
+    volumes:
+      - ./web:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+      - postgres
