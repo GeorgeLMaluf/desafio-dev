@@ -22,6 +22,9 @@ gem 'puma', '~> 5.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+# ActiveModel Serializer helper class
+gem 'active_model_serializers'
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
@@ -39,9 +42,9 @@ group :development, :test do
     gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'main'
   end
 
-  gem 'rubocop'
-  gem 'rubocop-performance'
-  gem 'rubocop-rspec'
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :test do
