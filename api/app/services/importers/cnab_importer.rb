@@ -8,10 +8,8 @@ module Importers
       @file_path = file_path
     end
 
-    def read_and_import_data
-      response = []
-
-      return response unless valid_extension?(@file_path)
+    def read_and_import_data?
+      return false unless valid_extension?(@file_path)
 
       readed_file = File.open(@file_path).readlines
 
@@ -26,12 +24,12 @@ module Importers
         Transaction.create(data_transaction)
       end
 
-      response
+      true
     end
 
     class << self
-      def import(file_path)
-        new(file_path).read_and_import_data
+      def import?(file_path)
+        new(file_path).read_and_import_data?
       end
     end
 
