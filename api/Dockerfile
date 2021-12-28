@@ -12,4 +12,4 @@ RUN bundle install
 ADD Gemfile.lock /api/Gemfile.lock
 ADD . /api
 
-EXPOSE 3010
+EXPOSE 4000

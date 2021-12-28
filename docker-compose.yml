@@ -11,14 +11,14 @@ services:
   api:
     build: ./api
     expose:
-      - "3010"
+      - "4000"
     command: >
       bash -c "rm -f tmp/pids/server.pid &&
       bundle exec rails db:migrate && 
       bundle exec rails db:seed && 
-      bundle exec rails s -p 3010 -b '0.0.0.0'"
+      bundle exec rails s -p 4000 -b '0.0.0.0'"
     ports:
-      - "3010:3010"
+      - "4000:4000"
     env_file:
       - ".env"
     volumes:
