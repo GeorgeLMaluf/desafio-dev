@@ -5,8 +5,7 @@ module Api
     class ProvidersController < Api::BaseApiController
       def index
         response = ::Providers::GetProviders.call
-
-        render json: response, status: :ok
+        render json: response.to_json, status: :ok
       end
     end
   end

@@ -10,7 +10,7 @@ module Providers
       providers.each do |provider|
         response.push(::Api::V1::ProviderSerializer.new(provider))
       end
-
+      
       response
     end
 
