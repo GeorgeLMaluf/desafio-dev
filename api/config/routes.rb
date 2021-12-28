@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: 'json' } do
     namespace :v1 do
       resources :providers, only: [:index]
+      resources :transactions, only: [:index]
       post 'import_file', to: 'import#import_file'
     end
   end
