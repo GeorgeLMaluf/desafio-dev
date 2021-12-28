@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :providers, only: [:index]
       resources :transactions, only: [:index]
+      
+      get 'transactions/by_provider/:providerId', to: 'transactions#by_provider'
       post 'import_file', to: 'import#import_file'
     end
   end
