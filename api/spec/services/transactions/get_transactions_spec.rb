@@ -26,7 +26,7 @@ RSpec.describe Transactions::GetTransactions do
 
   context 'when there are not transactions' do
     before do
-      Transaction.destroy_all
+      DatabaseCleaner.clean
     end
 
     it 'return zero transactions' do
