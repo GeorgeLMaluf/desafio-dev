@@ -1,8 +1,9 @@
 import React from "react";
+import ListTransactionsByProvider from '../../components/ListTransactionsByProvider';
 
 const ListPage = () => (
   <div>
-    <p>Listing...</p>
+    <ListTransactionsByProvider/>
   </div>
 )
 
