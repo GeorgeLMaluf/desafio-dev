@@ -19,7 +19,7 @@ const ListTransactions = () => {
             <thead>
               <tr>
                 <th>Nome da Loja</th>
-                <th>Cpf Client</th>
+                <th>Cpf Cliente</th>
                 <th>Tipo</th>
                 <th>No. Cartao</th>
                 <th>Natureza</th>
